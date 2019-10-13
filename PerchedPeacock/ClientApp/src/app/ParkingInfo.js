@@ -6,4 +6,4 @@ var ParkingInfo = /** @class */ (function () {
     return ParkingInfo;
 }());
 exports.ParkingInfo = ParkingInfo;
-//# sourceMappingURL=ParkingInfo.js.map
+//# sourceMappingURL=parkingInfo.js.map

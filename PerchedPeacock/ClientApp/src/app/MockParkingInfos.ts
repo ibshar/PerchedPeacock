@@ -1,43 +1,49 @@
-import { ParkingInfo } from './ParkingInfo';
+import { ParkingInfo } from './parkingInfo';
 
 export const PARKINGS: ParkingInfo[] = [
-    {   VehicleNo: 'KA01AB1001',
-        VehicleWeight: 900,
-        LotId: 1,
-        ParkingLotId: 1,
-        Duration: 2,
-        Amount: 200
+    {
+        id: 1,
+        vehicleNo: 'KA01AB1001',
+        vehicleWeight: 900,
+        lotId: 1,
+        parkingLotId: 1,
+        duration: 2,
+        amount: 200
     },
     {
-        VehicleNo: 'KA01AB1002',
-        VehicleWeight: 1200,
-        LotId: 1,
-        ParkingLotId: 2,
-        Duration: 3,
-        Amount: 300
+        id: 2,
+        vehicleNo: 'KA01AB1002',
+        vehicleWeight: 1200,
+        lotId: 1,
+        parkingLotId: 2,
+        duration: 3,
+        amount: 300
     },
     {
-        VehicleNo: 'KA01AB1003',
-        VehicleWeight: 1400,
-        LotId: 1,
-        ParkingLotId: 3,
-        Duration: 1,
-        Amount: 100
+        id: 3,
+        vehicleNo: 'KA01AB1003',
+        vehicleWeight: 1400,
+        lotId: 1,
+        parkingLotId: 3,
+        duration: 1,
+        amount: 100
     },
     {
-        VehicleNo: 'KA01AB1004',
-        VehicleWeight: 1000,
-        LotId: 1,
-        ParkingLotId: 4,
-        Duration: 3,
-        Amount: 300
+        id: 4,
+        vehicleNo: 'KA01AB1004',
+        vehicleWeight: 1000,
+        lotId: 1,
+        parkingLotId: 4,
+        duration: 3,
+        amount: 300
     },
     {
-        VehicleNo: 'KA01AB1005',
-        VehicleWeight: 1100,
-        LotId: 1,
-        ParkingLotId: 5,
-        Duration: 6,
-        Amount: 600
-    },
+        id: 5,
+        vehicleNo: 'KA01AB1005',
+        vehicleWeight: 1100,
+        lotId: 1,
+        parkingLotId: 5,
+        duration: 6,
+        amount: 600
+    }
 ];

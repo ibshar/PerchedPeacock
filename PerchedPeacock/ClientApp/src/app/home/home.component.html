@@ -1,27 +1,32 @@
-<h2>Perched Peacock Parking Manager</h2>
+<h2>Parking Manager</h2>
 <div>
   <table class='table table-striped' aria-labelledby="tableLabel">
     <tr>
       <td>Vehicle Number</td>
-      <td><input [(ngModel)]="pInfo.VehicleNo" /></td>
+      <td><input [(ngModel)]="pInfo.vehicleNo" /></td>
     </tr>
     <tr>
-      <td>Vehicle Weight</td>
-      <td><input [(ngModel)]="pInfo.VehicleWeight" /></td>
+      <td>Vehicle Weight (KG)</td>
+      <td><input [(ngModel)]="pInfo.vehicleWeight" /></td>
     </tr>
     <tr>
       <td>Lot Id</td>
-      <td><input [(ngModel)]="pInfo.LotId" /></td>
+      <td><input [(ngModel)]="pInfo.lotId" /></td>
     </tr>
     <tr>
       <td>Parking Lot Id</td>
-      <td><input [(ngModel)]="pInfo.ParkingLotId" /></td>
+      <td><input [(ngModel)]="pInfo.parkingLotId" /></td>
     </tr>
     <tr>
-      <td>Duration</td>
-      <td><input [(ngModel)]="pInfo.Duration" /></td>
+      <td>Duration (Hrs)</td>
+      <td><input [(ngModel)]="pInfo.duration" /></td>
+    </tr>
+    <tr>
+      <td><button class="btn btn-primary" (click)="reserveParking()">Reserve</button></td>
+      <td><p *ngIf="resultVisible"><b>Amount (Rs) {{newAmount}}</b></p></td>
     </tr>
   </table>
+  
 </div>
 
-<button class="btn btn-primary" (click)="ReserveParking()">Reserve</button>
+

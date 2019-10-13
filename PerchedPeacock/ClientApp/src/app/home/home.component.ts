@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ParkingInfo } from '../ParkingInfo';
+import { ParkingInfo } from '../parkingInfo';
+import { ParkingService } from '../parking.service';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,20 @@ import { ParkingInfo } from '../ParkingInfo';
 })
 export class HomeComponent implements OnInit {
 
-    pInfo: ParkingInfo;
+    pInfo = new ParkingInfo();
+    newId: number;
+    newAmount: number;
+    resultVisible = false;
 
-    public ReserveParking() {
-        
+    reserveParking(): void {
+        this.parkingService.addParking(this.pInfo).subscribe(newP => {
+            this.newId = newP.id;
+            this.newAmount = newP.amount;
+            this.pInfo = new ParkingInfo();
+            this.resultVisible = true;
+        });
     }
-    constructor() { }
+    constructor(private parkingService: ParkingService) { }
 
     ngOnInit(): void {
     }

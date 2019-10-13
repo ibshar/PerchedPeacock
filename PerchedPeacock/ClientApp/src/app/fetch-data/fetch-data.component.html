@@ -14,8 +14,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let parking of parkings" (click)="onSelect(parking)">
-      <td>{{ parking.vehicleNo }}</td>
+    <tr *ngFor="let parking of parkings">
+      <td><a [routerLink]="['/']">{{ parking.vehicleNo }}</a></td>
       <td>{{ parking.vehicleWeight }}</td>
       <td>{{ parking.lotId }}</td>
       <td>{{ parking.parkingLotId }}</td>
