@@ -17,6 +17,10 @@ export class FetchDataComponent implements OnInit {
         this.parkingService.getParkings().subscribe(p => this.parkings = p);
     }
 
+    delete(parking: ParkingInfo): void {
+        this.parkingService.deleteParking(parking.id).subscribe(() => this.getHeroes());
+    }
+
     ngOnInit() {
         this.getHeroes();
     }

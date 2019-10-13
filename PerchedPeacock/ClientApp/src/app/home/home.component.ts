@@ -14,12 +14,14 @@ export class HomeComponent implements OnInit {
     newAmount: number;
     resultVisible = false;
     updateMode = false;
+    slots: number;
 
     reserveParking(): void {
         this.parkingService.addParking(this.pInfo).subscribe(newP => {
             this.pInfo = new ParkingInfo();
             this.pInfo.amount = newP.amount;
             this.resultVisible = true;
+            this.slots = this.parkingService.parkingSlots;
         });
     }
 
@@ -51,5 +53,6 @@ export class HomeComponent implements OnInit {
 
     ngOnInit(): void {
         this.getParking();
+        this.slots = this.parkingService.parkingSlots;
     }
 }

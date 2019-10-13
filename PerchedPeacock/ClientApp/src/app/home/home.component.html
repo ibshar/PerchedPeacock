@@ -1,4 +1,7 @@
 <h2>Parking Manager</h2>
+<div class="btn">
+  <p><b>Available slots {{slots}}</b></p>
+</div>
 <div>
   <table class='table table-striped' aria-labelledby="tableLabel">
     <tr>
@@ -23,7 +26,8 @@
     </tr>
     <tr>
       <td>
-        <button *ngIf="!updateMode" class="btn btn-primary" (click)="reserveParking()">Reserve</button>
+        <p *ngIf="slots <= 0"><b>Parking FULL</b></p>
+        <button *ngIf="!updateMode && slots > 0" class="btn btn-primary" (click)="reserveParking()">Reserve</button>
         <button *ngIf="updateMode" class="btn btn-primary" (click)="updateParking()">Update</button>
       </td>
       <td><p *ngIf="resultVisible"><b>Amount (Rs) {{pInfo.amount}}</b></p></td>
