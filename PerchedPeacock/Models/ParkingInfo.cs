@@ -10,6 +10,6 @@ namespace PerchedPeacock.Models
         public int LotId { get; set; }
         public int ParkingLotId { get; set; }
         public int Duration { get; set; }
-        public int Amount { get; set; }
+        public int Amount => Duration * 100;
     }
 }
