@@ -22,8 +22,11 @@
       <td><input [(ngModel)]="pInfo.duration" /></td>
     </tr>
     <tr>
-      <td><button class="btn btn-primary" (click)="reserveParking()">Reserve</button></td>
-      <td><p *ngIf="resultVisible"><b>Amount (Rs) {{newAmount}}</b></p></td>
+      <td>
+        <button *ngIf="!updateMode" class="btn btn-primary" (click)="reserveParking()">Reserve</button>
+        <button *ngIf="updateMode" class="btn btn-primary" (click)="updateParking()">Update</button>
+      </td>
+      <td><p *ngIf="resultVisible"><b>Amount (Rs) {{pInfo.amount}}</b></p></td>
     </tr>
   </table>
   

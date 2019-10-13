@@ -5,6 +5,7 @@
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="parkings">
   <thead>
     <tr>
+      <th>Id</th>
       <th>Vehicle No</th>
       <th>Vehicle Weight (KG)</th>
       <th>Lot Id</th>
@@ -15,7 +16,8 @@
   </thead>
   <tbody>
     <tr *ngFor="let parking of parkings">
-      <td><a [routerLink]="['/']">{{ parking.vehicleNo }}</a></td>
+      <td>{{ parking.id }}</td>
+      <td><a routerLink="/home/{{parking.id}}">{{ parking.vehicleNo }}</a></td>
       <td>{{ parking.vehicleWeight }}</td>
       <td>{{ parking.lotId }}</td>
       <td>{{ parking.parkingLotId }}</td>
